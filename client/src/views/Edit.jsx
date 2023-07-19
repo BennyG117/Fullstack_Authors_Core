@@ -75,8 +75,8 @@ const Edit = () => {
   };
   
   return (
-    <div>
-      <Link to={"/authors"}>Home</Link>
+    <div className='pageContainer'>
+      <Link to={"/authors"} className='topLink'>Home</Link>
       <h3>Edit this author: </h3>
 
 

@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 import {Routes, Route, Link} from 'react-router-dom'
 import Dashboard from "./views/Dashboard";
 import Edit from "./views/Edit";

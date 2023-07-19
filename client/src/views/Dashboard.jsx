@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Delete from "../components/Delete";
+// import '../App.css'
+
 
 const Dashboard = () => {
   const [authors, setAuthors] = useState([]);
@@ -29,8 +31,8 @@ const Dashboard = () => {
     setAuthors(authors.filter((targetAuthor) => targetAuthor._id !== id));
   };
   return (
-    <div>
-      <Link to={`/authors/new`}>Add an Author</Link>
+    <div className='pageContainer'>
+      <Link to={`/authors/new`} className='topLink'>Add an Author</Link>
       <h3>We have quotes by: </h3>
 
           <div>
@@ -45,14 +47,14 @@ const Dashboard = () => {
         return (
           <tr key={key}>
               <td>
-                <h2>{author.name}</h2>
+                <h2 className="aNames">{author.name}</h2>
               </td>
-              <td >
-                <div>
-                  <button onClick={() => {
+              <td className='actionBox'>
+                <div className="actionButtons">
+                  <button className="dashButton" onClick={() => {
                       navigator(`/authors/${author._id}/edit`)
                     }}>Edit</button>
-                  <Delete deleteAuthor={() => {
+                  <Delete  deleteAuthor={() => {
                       deletingAuthor(author._id);}}/>
                 </div>
               </td>
@@ -61,7 +63,7 @@ const Dashboard = () => {
             ) : (
               <p>LOADING...</p>
             )}
-                    </table>;
+                    </table>
           </div>
     </div>
   );

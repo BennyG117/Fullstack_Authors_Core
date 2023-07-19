@@ -7,7 +7,7 @@ const {deleteAuthor} = props
 
   return (
     <div>
-      <button onClick={deleteAuthor}>Delete</button>
+      <button className='dashButton' onClick={deleteAuthor}>Delete</button>
 
 
     </div>

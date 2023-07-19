@@ -1,38 +1,90 @@
+/*==================(General Css)==================*/
+
+/* css reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* H1 tag over the top of each page */
+h1 {
+  margin-left: 20px;
+}
+
+/* H3 tag over the top of each sub page */
+h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: purple;
+}
+
+/* entire app text align (besides h1) setting to "Start"*/
 .App {
-  text-align: center;
+  text-align: start;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Links above page headers*/
+.topLink{
+color: blue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* container for each view page*/
+.pageContainer {
+  margin-left: 20px;
+  margin-top: 10px;
+  max-width: 500px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/*==================(Dashboard view)==================*/
+
+/* dashboard table*/
+table, th, td {
+  border: solid 1px;
+  padding: 5px;
+  height: 40px;
+}
+
+/* tr {
+  hover {background-color: #ddd;}
+} */
+
+.actionBox {
+display: flex;
+flex-direction: row;
+}
+
+/* names of authors*/
+.aNames{
+  color: purple;
+}
+
+/*Container holding the buttons*/
+.actionButtons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  min-width: 125px;
 }
 
-.App-link {
-  color: #61dafb;
+/* reminder this is for both buttons on dashboard, but delete has it's class added in the component file*/
+.dashButton {
+  background-color: lightgray;
+  height: 30px;
+  width: 60px;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+/*==================(Edit view)==================*/
+
+
+/*==================(New view)==================*/
+
+
+/*==================(Error view)==================*/
+
+

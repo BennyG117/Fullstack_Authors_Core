@@ -55,8 +55,8 @@ const handleSubmit = (e) => {
     fontweight: "bold",
   };
   return (
-    <div>
-      <Link to={"/authors"}>Home</Link>
+    <div className='pageContainer'>
+      <Link to={"/authors"} className='topLink'>Home</Link>
       <h3>Add a new author: </h3>
 
       <fieldset>

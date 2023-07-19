@@ -47,8 +47,6 @@ const handleSubmit = (e) => {
           });
       };
 
-
-
   //adding error style
   const errStyle = {
     color: "red",
@@ -56,7 +54,6 @@ const handleSubmit = (e) => {
     padding: 0,
     fontweight: "bold",
   };
-//TODO: fix issue with cancel button inside form
   return (
     <div>
       <Link to={"/authors"}>Home</Link>

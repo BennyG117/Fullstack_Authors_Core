@@ -28,14 +28,11 @@ const Dashboard = () => {
       .then((res) => console.log(res));
     setAuthors(authors.filter((targetAuthor) => targetAuthor._id !== id));
   };
-
-  //TODO: DELETE BUTTON NOT WORKING
-
   return (
     <div>
       <Link to={`/authors/new`}>Add an Author</Link>
       <h3>We have quotes by: </h3>
-      {/* Add mapping into the table below - target author.name?, edit button, and delete button // Add key={key}?*/}
+
           <div>
             
             <table >
@@ -43,7 +40,8 @@ const Dashboard = () => {
               <th>Author</th>
               <th>Actions Available</th>
             </tr>
-      {authors.map((author, key) => {
+            {authors.length > 0 ? (
+      authors.map((author, key) => {
         return (
           <tr key={key}>
               <td>
@@ -59,7 +57,10 @@ const Dashboard = () => {
                 </div>
               </td>
             </tr>
-            )})}
+            )})
+            ) : (
+              <p>LOADING...</p>
+            )}
                     </table>;
           </div>
     </div>

@@ -82,12 +82,13 @@ const Edit = () => {
 
 {/* REMINDER TO ADD PREPOPULATION OF FIELDS* */}
 
-      <fieldset>
+      <fieldset >
         {/* <legend>Name: </legend> */}
-        <form onSubmit={handleSubmit}>
+        <form className='fieldContainer' onSubmit={handleSubmit}>
           <p style={errStyle}>{nameErr}</p>
           <label>Name: </label>
           <input
+            className="inputFields"
             name="name"
             type="text"
             onChange={handleChange}
@@ -95,9 +96,9 @@ const Edit = () => {
           />
           <br/>
           {/* may run into issue regarding the cancel with onSubmit form // try building link into cancel (navigate to dashboard?) */}
-          <div>
-          <Link to={`/`}><button>Cancel</button></Link>
-          <button>Submit</button>
+          <div className="cancelSubmit">
+          <Link to={`/`} ><button className="cancel">Cancel</button></Link>
+          <button className="submit">Submit</button>
           </div>
             
         </form>

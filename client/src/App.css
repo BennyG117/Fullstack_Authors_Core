@@ -45,6 +45,10 @@ table, th, td {
   height: 40px;
 }
 
+th {
+background-color: lightgray;
+font-weight: bolder;
+}
 /* tr {
   hover {background-color: #ddd;}
 } */
@@ -77,14 +81,49 @@ flex-direction: row;
 }
 
 
+/*==================(Edit & New view)==================*/
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+  padding: 20px;
+}
+label {
+margin-bottom: 12px;
+}
+.inputFields{
+  margin-bottom: 10px;
+  max-width: 200px;
+}
+
+.cancelSubmit {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  justify-content: start;
+
+}
+
+.cancel {
+  margin-right: 10px;
+  height: 30px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: lightblue;
+}
+
+.submit {
+  height: 30px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: lightblue;
 
 
-/*==================(Edit view)==================*/
-
-
-/*==================(New view)==================*/
-
-
+}
 /*==================(Error view)==================*/
-
+.errorPage {
+  color: red;
+  font-size: larger;
+  font-weight: bold;
+}
 
